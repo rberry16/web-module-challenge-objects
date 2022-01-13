@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    return {name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,7 +28,11 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+const pizza = createMenuItem('pizza', 5, 'lunch');
+const lasagna = createMenuItem('lasagna', 8, 'dinner');
+const pancakes = createMenuItem('pancakes', 4, 'breakfast');
 
+console.log(pizza, lasagna, pancakes);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,9 +51,15 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function determine (role){
+    if (role === 'teacher' || role === 'student'){
+      return this.price * .75;
+    }else{
+      return this.price *.9;
+    }
+  }
 }
-
+console.log(burger.discount('teacher'));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -68,7 +78,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5]);
 
 
 
@@ -77,7 +87,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
+console.log(reviews);
 
 
 
